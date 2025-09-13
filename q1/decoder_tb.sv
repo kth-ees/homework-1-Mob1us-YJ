@@ -11,4 +11,12 @@ module decoder_tb;
   );
 
   // Complete your testbench here
+  initial begin
+    for (int i = 0; i < 16; i++) begin
+      binary = i[3:0];
+      #10; // Wait for 10 time units
+      $display("binary: %b, one_hot: %b", binary, one_hot);
+    end
+  end
+
 endmodule
